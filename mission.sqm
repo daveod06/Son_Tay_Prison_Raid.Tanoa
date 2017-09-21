@@ -1,0 +1,135 @@
+version=53;
+class EditorData
+{
+	moveGridStep=0.125;
+	angleGridStep=0.08726646;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=101;
+	class ItemIDProvider
+	{
+		nextID=44;
+	};
+	class MarkerIDProvider
+	{
+		nextID=3;
+	};
+	class Camera
+	{
+		pos[]={6978.3081,405.14572,6949.9976};
+		dir[]={0.71812314,-0.69298637,0.064126708};
+		up[]={0.69024402,0.72094405,0.061636802};
+		aside[]={0.088946715,-2.9032708e-007,-0.99605918};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Ui_F",
+	"WW2_Core_c_IF_Gui_c",
+	"CUP_AirVehicles_CH53E",
+	"CUP_AirVehicles_UH1H"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=4;
+		class Item0
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="WW2_Core_c_IF_Gui_c";
+			name="WW2_Core_c_IF_Gui_c";
+		};
+		class Item2
+		{
+			className="CUP_AirVehicles_CH53E";
+			name="CUP_AirVehicles_CH53E";
+		};
+		class Item3
+		{
+			className="CUP_AirVehicles_UH1H";
+			name="CUP_AirVehicles_UH1H";
+		};
+	};
+};
+randomSeed=4986173;
+class ScenarioData
+{
+	author="SaberSnack";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogBase=250;
+		forecastFogBase=250;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=3;
+		class Item0
+		{
+			dataType="Marker";
+			position[]={8986.5,0,10818.5};
+			name="marker_0";
+			text="Son Tay Prison";
+			type="o_installation";
+			id=2;
+			atlOffset=-45.86536;
+		};
+		class Item1
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7196.5,7.4969931,7142.3779};
+				angles[]={-0,6.1086526,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=31;
+			type="CUP_B_CH53E_USMC";
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7187.875,4.9810266,7183.875};
+				angles[]={-0,6.1086526,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=39;
+			type="CUP_I_UH1H_slick_TK_GUE";
+		};
+	};
+};
