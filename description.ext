@@ -1,0 +1,154 @@
+/*
+ Sets the overall mission attributes, and defines some global entities that
+ will be available to other scripts
+ 
+ See Also:
+ * https://community.bistudio.com/wiki/Description.ext
+ * https://community.bistudio.com/wiki/Loading_Screens
+ * https://community.bistudio.com/wiki/Mission_Overview
+ * https://community.bistudio.com/wiki/Multiplayer_Game_Types
+ * https://community.bistudio.com/wiki/Arma_3_Mission_Parameters
+*/
+// The author of the mission; the name will be shown above the loadScreen
+// displayed as "by <author>"
+author = "SaberSnack";
+// Name of the mission shown in a larger font above the loadScreen
+onLoadName = "Takistan Mujahideen Insurgency";
+/* Mission Overview details */
+// Image displayed during Mission Selection. Image should be .paa format and
+// in 2:1 aspect ratio.
+overviewPicture = "";
+// Description of the mission displayed during Mission Selection
+overviewText = "The Soviet 40th Army has invaded Takistan to support the puppet communist government they installed last year.";
+// Game Type settings
+class Header {
+ gameType = CTI;
+ minPlayers = 1;
+ maxPlayers = 40;
+};
+/* Intro Loading details */
+// The description displayed while the Intro is loading
+onLoadIntro = "Kill the communist invaders!";
+// Whether to display time and date while the Intro loads
+// 1 = visible; 0 = hidden
+onLoadIntroTime = 1;
+/* Mission Loading details */
+// The description displayed in the mission browser and while the Mission is
+// loading
+onLoadMission = "Kill the communist invaders!";
+// Whether to display time and date while the Mission loads
+// 1 = visible; 0 = hidden
+onLoadMissionTime = 1;
+// The image to display while the Mission loads; the path is relative to the
+// mission folder. Image must be in PAA file format with 2:1 aspect ratio,
+// ideally 1024x512 pixels. Different aspect are rendered correctly as well,
+// but won't cover the whole area.
+loadScreen = "";
+/* Respawn settings */
+// Respawn mode can be any of:
+// 0 or "NONE" : No respawn
+// 1 or "BIRD" : Respawn as a seagull
+// 2 or "INSTANT" : Respawn exactly where you died
+// 3 or "BASE" : Respawn on markers set by mission maker
+// 4 or "GROUP" : Respawn into an AI unit in your group, otherwise seagull
+// 5 or "SIDE" : Respawn into an AI unit on your side, otherwise seagull
+respawn = 3;
+// Respawn timer for players, in seconds
+respawnDelay = 5;
+// Respawn timer for vehicles, in seconds
+respawnVehicleDelay = 300;
+// Show scoreboard and timer during respawn countdown
+// 1 for visible, 0 for hidden
+respawnDialog = 0;
+// Whether to respawn player upon joining
+// 1 will respawn the player and run the respawn script
+// 0 will not respawn the player but will run the respawn script
+// -1 will not respawn the player nor will it run the respawn script
+respawnOnStart = -1;
+// Respawn templates for things like custom camera modes
+respawnTemplates[] = {};
+// idk what this does
+respawnButton = 1;
+
+/* Basic Revive settings */
+
+// Time it takes (in seconds) to revive a unit
+reviveDelay = 8;
+
+// Time it takes (in seconds) for an incapacitated unit to force respawn
+reviveForceRespawnDelay = 20;
+
+// Time it takes (in seconds) for a unit to bleed out
+reviveBleedOutDelay = 120;
+
+
+/* AI settings */
+
+// Enables or disables AI for playable units
+// 1 = AI will control playable units,
+// 0 = playable units will not spawn until a player joins in that slot
+disabledAI = 0;
+
+// Disable scorelist for AI
+aiKills = 0;
+
+// Enable debug console
+// 0 - Available only in editor
+// 1 - Available in SP and for hosts / admins
+// 2 - Available for everyone
+enableDebugConsole = 1;
+
+// Disable manual team switch
+enableTeamSwitch = 0;
+
+// Disable group indicators
+showGroupIndicator = 1;
+
+
+corpseManagerMode = 1;
+corpseLimit = 1;
+corpseRemovalMinTime = 300;
+corpseRemovalMaxTime = 3600;
+
+class Params
+{
+	class Respawn
+	{
+		title = "Respawn";
+		values[] = {0,1,2,3};
+		texts[] = {"20 Seconds", "45 Seconds", "90 Seconds", "Disabled"};
+		default = 1;               
+	};
+    //class AISkill
+	//{
+	//	title = "AI Skill"; // Param name visible in the list
+	//	values[] = {0,1,2}; // Values; must be integers; has to have the same number of elements as 'texts'
+	//	texts[] = {"Recruit","Regular","Veteran"}; // Description of each selectable item
+	//	default = 1; // Default value; must be listed in 'values' array, otherwise 0 is used
+	//	// Default values that are not whole numbers do not work. Param will default to 0 (or 1 if defined)
+	//};
+	//class Daytime
+	//{
+	//	title = "Time";
+	//	texts[] = {"Morning","Day","Evening","Night"};
+	//	values[] = {6,12,18,0};
+	//	default = 12;
+	//	function = "BIS_fnc_paramDaytime"; // (Optional) [[Functions_Library_(Arma_3)|Function]] [[call]]ed when player joins, selected value is passed as an argument
+	//	isGlobal = 1; // (Optional) 1 to execute script / function locally for every player who joins, 0 to do it only on server
+	//};
+	//class ViewDistance
+	//{
+	//	title = "View distance (in metres)";
+	//	values[] = {3000,5000,7000,9000};
+	//	// When 'texts' are missing, values will be displayed directly instead
+	//	default = 9000;
+	//	file = "setViewDistance.sqf"; // (Optional) Script [[call]]ed when player joins, selected value is passed as an argument
+	//};
+
+    #define VIEW_DISTANCE_MIN 3000
+	#define VIEW_DISTANCE_MAX 12000
+	#define VIEW_DISTANCE_DEFAULT 9000
+	#include "\a3\Functions_F_Heli\Params\paramViewDistance.hpp"
+};
+
+
