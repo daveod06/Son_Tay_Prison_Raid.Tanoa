@@ -1,0 +1,697 @@
+// Generic
+
+comment "Exported from Arsenal by SaberSnack";
+
+comment "[!] UNIT MUST BE LOCAL [!]";
+if (!local this) exitWith {};
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add weapons";
+this addWeapon "uns_MX991_m1911";
+this addHandgunItem "uns_m1911mag";
+
+comment "Add containers";
+this forceAddUniform "UNS_SOG_BDU_O";
+this addVest "rhsgref_alice_webbing";
+this addBackpack "B_Carryall_oli";
+
+comment "Add binoculars";
+this addWeapon "uns_ANPVS2";
+
+comment "Add items to containers";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+for "_i" from 1 to 5 do {this addItemToUniform "rhs_mag_m67";};
+for "_i" from 1 to 2 do {this addItemToUniform "uns_m1911mag";};
+for "_i" from 1 to 2 do {this addItemToUniform "SmokeShell";};
+this addItemToBackpack "Medikit";
+for "_i" from 1 to 4 do {this addItemToBackpack "rhs_mag_m67";};
+for "_i" from 1 to 2 do {this addItemToBackpack "SmokeShell";};
+this addItemToBackpack "rhs_grenade_mki_mag";
+for "_i" from 1 to 2 do {this addItemToBackpack "DemoCharge_Remote_Mag";};
+this addItemToBackpack "ClaymoreDirectionalMine_Remote_Mag";
+this addHeadgear "rhsgref_hat_M1951";
+this addGoggles "rhs_ess_black";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+
+comment "Set identity";
+[this,"WhiteHead_20","male02gre"] call BIS_fnc_setIdentity;
+
+
+
+
+
+
+
+// Officer XM177E2
+
+comment "Exported from Arsenal by SaberSnack";
+
+comment "[!] UNIT MUST BE LOCAL [!]";
+if (!local this) exitWith {};
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add weapons";
+this addWeapon "hlc_wp_XM177E2";
+this addPrimaryWeaponItem "rhs_mag_30Rnd_556x45_M855_Stanag";
+this addWeapon "uns_MX991_m1911";
+this addHandgunItem "uns_m1911mag";
+
+comment "Add containers";
+this forceAddUniform "UNS_SOG_BDU_O";
+this addVest "rhsgref_alice_webbing";
+this addBackpack "B_Carryall_oli";
+
+comment "Add binoculars";
+this addWeapon "uns_ANPVS2";
+
+comment "Add items to containers";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+for "_i" from 1 to 5 do {this addItemToUniform "rhs_mag_m67";};
+for "_i" from 1 to 2 do {this addItemToUniform "uns_m1911mag";};
+for "_i" from 1 to 2 do {this addItemToUniform "SmokeShell";};
+for "_i" from 1 to 12 do {this addItemToVest "rhs_mag_30Rnd_556x45_M855_Stanag";};
+this addItemToBackpack "Medikit";
+for "_i" from 1 to 2 do {this addItemToBackpack "DemoCharge_Remote_Mag";};
+for "_i" from 1 to 4 do {this addItemToBackpack "rhs_mag_m67";};
+for "_i" from 1 to 2 do {this addItemToBackpack "rhs_grenade_mki_mag";};
+this addItemToBackpack "SmokeShellBlue";
+this addItemToBackpack "SmokeShellGreen";
+this addItemToBackpack "SmokeShellOrange";
+this addItemToBackpack "SmokeShellPurple";
+for "_i" from 1 to 10 do {this addItemToBackpack "rhs_mag_30Rnd_556x45_M855_Stanag";};
+this addHeadgear "rhsgref_hat_M1951";
+this addGoggles "rhs_ess_black";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "UNS_ItemRadio_PRC_25";
+
+comment "Set identity";
+[this,"WhiteHead_15_cfaces_lrrpcamo07",""] call BIS_fnc_setIdentity;
+
+
+
+
+
+
+
+// XM177E2
+
+comment "Exported from Arsenal by SaberSnack";
+
+comment "[!] UNIT MUST BE LOCAL [!]";
+if (!local this) exitWith {};
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add weapons";
+this addWeapon "hlc_wp_XM177E2";
+this addPrimaryWeaponItem "rhs_mag_30Rnd_556x45_M855_Stanag";
+this addWeapon "uns_MX991_m1911";
+this addHandgunItem "uns_m1911mag";
+
+comment "Add containers";
+this forceAddUniform "UNS_SOG_BDU_O";
+this addVest "rhsgref_alice_webbing";
+this addBackpack "B_Carryall_oli";
+
+comment "Add binoculars";
+this addWeapon "uns_ANPVS2";
+
+comment "Add items to containers";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+for "_i" from 1 to 5 do {this addItemToUniform "rhs_mag_m67";};
+for "_i" from 1 to 2 do {this addItemToUniform "uns_m1911mag";};
+for "_i" from 1 to 2 do {this addItemToUniform "SmokeShell";};
+for "_i" from 1 to 12 do {this addItemToVest "rhs_mag_30Rnd_556x45_M855_Stanag";};
+this addItemToBackpack "Medikit";
+for "_i" from 1 to 4 do {this addItemToBackpack "rhs_mag_m67";};
+for "_i" from 1 to 2 do {this addItemToBackpack "SmokeShell";};
+this addItemToBackpack "rhs_grenade_mki_mag";
+for "_i" from 1 to 2 do {this addItemToBackpack "DemoCharge_Remote_Mag";};
+this addItemToBackpack "ClaymoreDirectionalMine_Remote_Mag";
+for "_i" from 1 to 12 do {this addItemToBackpack "rhs_mag_30Rnd_556x45_M855_Stanag";};
+this addHeadgear "rhsgref_hat_M1951";
+this addGoggles "rhs_ess_black";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+
+comment "Set identity";
+[this,"WhiteHead_20","male02gre"] call BIS_fnc_setIdentity;
+
+
+
+// DEMO M16 + LAW
+
+comment "Exported from Arsenal by SaberSnack";
+
+comment "[!] UNIT MUST BE LOCAL [!]";
+if (!local this) exitWith {};
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add weapons";
+this addWeapon "hlc_wp_m16A1";
+this addPrimaryWeaponItem "rhs_mag_30Rnd_556x45_M855_Stanag";
+this addWeapon "rhs_weap_m72a7";
+this addWeapon "uns_MX991_m1911";
+this addHandgunItem "uns_m1911mag";
+
+comment "Add containers";
+this forceAddUniform "UNS_SOG_BDU_O";
+this addVest "rhsgref_alice_webbing";
+this addBackpack "B_Carryall_oli";
+
+comment "Add binoculars";
+this addWeapon "uns_ANPVS2";
+
+comment "Add items to containers";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+for "_i" from 1 to 5 do {this addItemToUniform "rhs_mag_m67";};
+for "_i" from 1 to 2 do {this addItemToUniform "uns_m1911mag";};
+for "_i" from 1 to 2 do {this addItemToUniform "SmokeShell";};
+for "_i" from 1 to 12 do {this addItemToVest "rhs_mag_30Rnd_556x45_M855_Stanag";};
+this addItemToBackpack "Medikit";
+this addItemToBackpack "rhs_grenade_mki_mag";
+for "_i" from 1 to 2 do {this addItemToBackpack "DemoCharge_Remote_Mag";};
+for "_i" from 1 to 7 do {this addItemToBackpack "rhs_mag_30Rnd_556x45_M855_Stanag";};
+for "_i" from 1 to 2 do {this addItemToBackpack "SatchelCharge_Remote_Mag";};
+this addHeadgear "rhsgref_hat_M1951";
+this addGoggles "rhs_ess_black";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+
+comment "Set identity";
+[this,"WhiteHead_21",""] call BIS_fnc_setIdentity;
+
+
+
+
+// M16A1
+
+comment "Exported from Arsenal by SaberSnack";
+
+comment "[!] UNIT MUST BE LOCAL [!]";
+if (!local this) exitWith {};
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add weapons";
+this addWeapon "hlc_wp_m16A1";
+this addPrimaryWeaponItem "hlc_muzzle_SF3P_556";
+this addPrimaryWeaponItem "rhs_mag_30Rnd_556x45_M855_Stanag";
+this addWeapon "uns_MX991_m1911";
+this addHandgunItem "uns_m1911mag";
+
+comment "Add containers";
+this forceAddUniform "UNS_SOG_BDU_O";
+this addVest "rhsgref_alice_webbing";
+this addBackpack "B_Carryall_oli";
+
+comment "Add binoculars";
+this addWeapon "uns_ANPVS2";
+
+comment "Add items to containers";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+for "_i" from 1 to 5 do {this addItemToUniform "rhs_mag_m67";};
+for "_i" from 1 to 2 do {this addItemToUniform "uns_m1911mag";};
+for "_i" from 1 to 2 do {this addItemToUniform "SmokeShell";};
+for "_i" from 1 to 12 do {this addItemToVest "rhs_mag_30Rnd_556x45_M855_Stanag";};
+this addItemToBackpack "Medikit";
+for "_i" from 1 to 4 do {this addItemToBackpack "rhs_mag_m67";};
+for "_i" from 1 to 2 do {this addItemToBackpack "SmokeShell";};
+this addItemToBackpack "rhs_grenade_mki_mag";
+for "_i" from 1 to 2 do {this addItemToBackpack "DemoCharge_Remote_Mag";};
+this addItemToBackpack "ClaymoreDirectionalMine_Remote_Mag";
+for "_i" from 1 to 14 do {this addItemToBackpack "rhs_mag_30Rnd_556x45_M855_Stanag";};
+this addHeadgear "rhsgref_hat_M1951";
+this addGoggles "rhs_ess_black";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+
+comment "Set identity";
+[this,"WhiteHead_20","male02gre"] call BIS_fnc_setIdentity;
+
+
+
+
+
+
+// AT Shotgun + LAW
+
+comment "Exported from Arsenal by SaberSnack";
+
+comment "[!] UNIT MUST BE LOCAL [!]";
+if (!local this) exitWith {};
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add weapons";
+this addWeapon "rhs_weap_M590_5RD";
+this addPrimaryWeaponItem "rhsusf_5Rnd_00Buck";
+this addWeapon "rhs_weap_m72a7";
+this addWeapon "uns_MX991_m1911";
+this addHandgunItem "uns_m1911mag";
+
+comment "Add containers";
+this forceAddUniform "UNS_SOG_BDU_O";
+this addVest "rhsgref_alice_webbing";
+this addBackpack "B_Carryall_oli";
+
+comment "Add binoculars";
+this addWeapon "uns_ANPVS2";
+
+comment "Add items to containers";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+for "_i" from 1 to 5 do {this addItemToUniform "rhs_mag_m67";};
+for "_i" from 1 to 2 do {this addItemToUniform "uns_m1911mag";};
+for "_i" from 1 to 2 do {this addItemToUniform "SmokeShell";};
+for "_i" from 1 to 21 do {this addItemToVest "rhsusf_5Rnd_00Buck";};
+this addItemToBackpack "Medikit";
+for "_i" from 1 to 2 do {this addItemToBackpack "SmokeShell";};
+this addItemToBackpack "rhs_grenade_mki_mag";
+for "_i" from 1 to 2 do {this addItemToBackpack "DemoCharge_Remote_Mag";};
+this addItemToBackpack "ClaymoreDirectionalMine_Remote_Mag";
+for "_i" from 1 to 4 do {this addItemToBackpack "rhs_mag_m67";};
+for "_i" from 1 to 9 do {this addItemToBackpack "rhsusf_5Rnd_00Buck";};
+this addHeadgear "rhsgref_hat_M1951";
+this addGoggles "rhs_ess_black";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+
+comment "Set identity";
+[this,"WhiteHead_15_cfaces_lrrpcamo01",""] call BIS_fnc_setIdentity;
+
+
+
+
+
+
+// Ammo Bearer
+
+comment "Exported from Arsenal by SaberSnack";
+
+comment "[!] UNIT MUST BE LOCAL [!]";
+if (!local this) exitWith {};
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add weapons";
+this addWeapon "hlc_wp_XM177E2";
+this addPrimaryWeaponItem "rhs_mag_30Rnd_556x45_M855_Stanag";
+this addWeapon "uns_MX991_m1911";
+this addHandgunItem "uns_m1911mag";
+
+comment "Add containers";
+this forceAddUniform "UNS_SOG_BDU_O";
+this addVest "rhsgref_alice_webbing";
+this addBackpack "B_Carryall_oli";
+
+comment "Add binoculars";
+this addWeapon "uns_ANPVS2";
+
+comment "Add items to containers";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+for "_i" from 1 to 5 do {this addItemToUniform "rhs_mag_m67";};
+for "_i" from 1 to 2 do {this addItemToUniform "uns_m1911mag";};
+for "_i" from 1 to 2 do {this addItemToUniform "SmokeShell";};
+for "_i" from 1 to 12 do {this addItemToVest "rhs_mag_30Rnd_556x45_M855_Stanag";};
+this addItemToBackpack "Medikit";
+for "_i" from 1 to 4 do {this addItemToBackpack "rhs_mag_m67";};
+for "_i" from 1 to 2 do {this addItemToBackpack "SmokeShell";};
+this addItemToBackpack "rhs_grenade_mki_mag";
+for "_i" from 1 to 10 do {this addItemToBackpack "rhs_mag_30Rnd_556x45_M855_Stanag";};
+for "_i" from 1 to 2 do {this addItemToBackpack "hlc_100Rnd_762x51_M_M60E4";};
+this addHeadgear "rhsgref_hat_M1951";
+this addGoggles "rhs_ess_black";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+
+comment "Set identity";
+[this,"WhiteHead_20","male02gre"] call BIS_fnc_setIdentity;
+
+
+
+
+// M60
+
+
+comment "Exported from Arsenal by SaberSnack";
+
+comment "[!] UNIT MUST BE LOCAL [!]";
+if (!local this) exitWith {};
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add weapons";
+this addWeapon "hlc_lmg_m60";
+this addPrimaryWeaponItem "hlc_100Rnd_762x51_M_M60E4";
+this addWeapon "uns_MX991_m1911";
+this addHandgunItem "uns_m1911mag";
+
+comment "Add containers";
+this forceAddUniform "UNS_SOG_BDU_O";
+this addVest "rhsgref_alice_webbing";
+this addBackpack "B_Carryall_oli";
+
+comment "Add binoculars";
+this addWeapon "uns_ANPVS2";
+
+comment "Add items to containers";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+for "_i" from 1 to 5 do {this addItemToUniform "rhs_mag_m67";};
+for "_i" from 1 to 2 do {this addItemToUniform "uns_m1911mag";};
+for "_i" from 1 to 2 do {this addItemToUniform "SmokeShell";};
+for "_i" from 1 to 2 do {this addItemToVest "hlc_100Rnd_762x51_M_M60E4";};
+this addItemToBackpack "Medikit";
+this addItemToBackpack "rhs_grenade_mki_mag";
+this addItemToBackpack "DemoCharge_Remote_Mag";
+for "_i" from 1 to 4 do {this addItemToBackpack "hlc_100Rnd_762x51_M_M60E4";};
+this addItemToBackpack "rhs_mag_m67";
+this addHeadgear "rhsgref_hat_M1951";
+this addGoggles "rhs_ess_black";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+
+comment "Set identity";
+[this,"WhiteHead_20","male02gre"] call BIS_fnc_setIdentity;
+
+
+
+// Medic
+
+comment "Exported from Arsenal by SaberSnack";
+
+comment "[!] UNIT MUST BE LOCAL [!]";
+if (!local this) exitWith {};
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add weapons";
+this addWeapon "hlc_wp_m16A1";
+this addPrimaryWeaponItem "hlc_muzzle_SF3P_556";
+this addPrimaryWeaponItem "rhs_mag_30Rnd_556x45_M855_Stanag";
+this addWeapon "uns_MX991_m1911";
+this addHandgunItem "uns_m1911mag";
+
+comment "Add containers";
+this forceAddUniform "UNS_SOG_BDU_O";
+this addVest "rhsgref_alice_webbing";
+this addBackpack "B_Carryall_oli";
+
+comment "Add binoculars";
+this addWeapon "uns_ANPVS2";
+
+comment "Add items to containers";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+for "_i" from 1 to 5 do {this addItemToUniform "rhs_mag_m67";};
+for "_i" from 1 to 2 do {this addItemToUniform "uns_m1911mag";};
+for "_i" from 1 to 2 do {this addItemToUniform "SmokeShell";};
+for "_i" from 1 to 12 do {this addItemToVest "rhs_mag_30Rnd_556x45_M855_Stanag";};
+this addItemToBackpack "Medikit";
+for "_i" from 1 to 4 do {this addItemToBackpack "FirstAidKit";};
+for "_i" from 1 to 6 do {this addItemToBackpack "SmokeShell";};
+this addItemToBackpack "rhs_grenade_mki_mag";
+for "_i" from 1 to 2 do {this addItemToBackpack "DemoCharge_Remote_Mag";};
+for "_i" from 1 to 12 do {this addItemToBackpack "rhs_mag_30Rnd_556x45_M855_Stanag";};
+this addHeadgear "rhsgref_hat_M1951";
+this addGoggles "rhs_ess_black";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+
+comment "Set identity";
+[this,"WhiteHead_20","male02gre"] call BIS_fnc_setIdentity;
+
+
+
+
+/// M79
+
+comment "Exported from Arsenal by SaberSnack";
+
+comment "[!] UNIT MUST BE LOCAL [!]";
+if (!local this) exitWith {};
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add weapons";
+this addWeapon "rhs_weap_m79";
+this addPrimaryWeaponItem "rhs_mag_M441_HE";
+this addWeapon "uns_MX991_m1911";
+this addHandgunItem "uns_m1911mag";
+
+comment "Add containers";
+this forceAddUniform "UNS_SOG_BDU_O";
+this addVest "rhsgref_alice_webbing";
+this addBackpack "B_Carryall_oli";
+
+comment "Add binoculars";
+this addWeapon "uns_ANPVS2";
+
+comment "Add items to containers";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+for "_i" from 1 to 5 do {this addItemToUniform "rhs_mag_m67";};
+for "_i" from 1 to 2 do {this addItemToUniform "uns_m1911mag";};
+for "_i" from 1 to 2 do {this addItemToUniform "SmokeShell";};
+for "_i" from 1 to 23 do {this addItemToVest "rhs_mag_M441_HE";};
+this addItemToBackpack "Medikit";
+for "_i" from 1 to 4 do {this addItemToBackpack "rhs_mag_m67";};
+for "_i" from 1 to 2 do {this addItemToBackpack "SmokeShell";};
+this addItemToBackpack "rhs_grenade_mki_mag";
+for "_i" from 1 to 2 do {this addItemToBackpack "DemoCharge_Remote_Mag";};
+this addItemToBackpack "ClaymoreDirectionalMine_Remote_Mag";
+for "_i" from 1 to 10 do {this addItemToBackpack "rhs_mag_m576";};
+for "_i" from 1 to 4 do {this addItemToBackpack "rhs_mag_m4009";};
+for "_i" from 1 to 5 do {this addItemToBackpack "uns_m1911mag";};
+this addHeadgear "rhsgref_hat_M1951";
+this addGoggles "rhs_ess_black";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+
+comment "Set identity";
+[this,"WhiteHead_20","male02gre"] call BIS_fnc_setIdentity;
+
+
+
+
+11531.429 , 9584.483
+7995.473 , 10486.736
+
+
+this setVariable ["CS_TYPE","CAS"];
+this setVariable ["CS_CALLSIGN","PEACH ONE"];
+
+
+[] spawn {
+	sleep 4.0;
+	playerGroup leaveVehicle insertionShip;
+	{
+		doGetOut _x;
+		moveOut _x;
+		sleep 0.6;
+	} forEach (units playerGroup);
+
+	sleep 10.0;
+	insertionShipGroup leaveVehicle insertionShip;
+	{
+		doGetOut _x;
+		moveOut _x;
+		sleep 0.25;
+	} forEach (units insertionShipGroup);
+
+	sleep 10.0;
+	(units insertionShipGroup) join playerGroup;
+};
+
+
+hint "ACTIVATED!";
+
+[] spawn { 
+ sleep 2.0; 
+    
+ {  
+  moveOut _x;  
+  sleep 0.6; 
+  unassignVehicle _x; 
+ } forEach (units greenleafGroup); 
+ greenleafGroup leaveVehicle apple1; 
+  
+};
+
+this disableAI "MOVE"; 
+this disableAI "TARGET";
+this disableAI "AUTOTARGET"; 
+this disableAI "AUTOCOMBAT"; 
+this setcaptive true;
+this setunitpos "middle"; 
+this addaction ["POW joins your team",
+{
+	_this select 0 setcaptive false;
+	sleep 0.1;
+	_this select 0 setunitpos "up";
+	sleep 0.1;
+	[_this select 0] join (_this select 1);
+	sleep 0.1;
+	_this select 0 setunitpos "up";
+	(group (_this select 0)) setBehaviour "AWARE";
+	(group (_this select 0)) setBehaviourStrong "AWARE";
+	_this select 0 setCombatMode "BLUE";
+	_this select 0 enableAI "MOVE";
+	_this select 0 enableAI "TARGET";
+	_this select 0 enableAI "AUTOTARGET";
+	_this select 0 enableAI "AUTOCOMBAT";
+	(group (_this select 0))  setSpeedMode "FULL";
+ },
+    [],
+    1.5, 
+    true, 
+    true, 
+    "",
+    "true",
+    3,
+    false,
+    "",
+    ""
+];
+
+
+
+this addaction ["Start the Raid!",
+{
+execVm "banana1Recording.sqf";
+execVm "apple1Recording.sqf";
+execVm "apple2Recording.sqf";
+execVm "apple3Recording.sqf";
+},
+    [],
+    1.5, 
+    true, 
+    true, 
+    "",
+    "true",
+    3,
+    false,
+    "",
+    ""
+];

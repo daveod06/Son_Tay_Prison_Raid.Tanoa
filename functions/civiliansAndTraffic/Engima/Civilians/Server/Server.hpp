@@ -1,0 +1,9 @@
+class CountPositionsInBuilding {};
+class FindDestinationPosition {};
+class FindSpawnPosition {};
+class GetAllPlayersPositions {};
+class GetParamValue {};
+class GetPlayerBuildings {};
+class PositionInsideBlackMarker {};
+class PositionIsInsideMarker {};
+class StartCivilians {};

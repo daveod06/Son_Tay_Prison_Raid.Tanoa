@@ -1,79 +1,40 @@
-//Saber_DEBUG = true;
+// NO PARAMS ARE PASSED INTO INIT.SQF
+private ["_useRevive"];
+private ["_volume", "_dynamicWeather", "_isJipPlayer"];
+private ["_showIntro", "_showPlayerMapAndCompass", "_fog", "_playerIsImmortal", "_playersEnteredWorld"];
+_player = player;
 
-//// Compile EOS
-//call compile preprocessFileLineNumbers "EnemyOccupationSystem\EOSInit.sqf";
-//sleep 1.0;
+diag_log format["init run for %1", name _player];
 
-//// Civilians & Traffic
-//call compile preprocessFileLineNumbers "CiviliansAndTraffic\Engima\Civilians\Init.sqf";
-//sleep 1.0;
-////call compile preprocessFileLineNumbers "CiviliansAndTraffic\Engima\Traffic\Init.sqf";
-//sleep 1.0;
+_isJipPlayer = false;
+if (!isServer && isNull player) then
+{
+    _isJipPlayer = true;
+};
 
-//// Compile Convoy, Airmobile, and Artillery
-//[] execVM "scripts\common\CommonInit.sqf";
-//sleep 2.0;
-//[] execVM "Convoy\ConvoyInit.sqf";
-//sleep 2.0;
-//[] execVM "Airmobile\AirmobileInit.sqf";
-//sleep 2.0;
-//[] execVM "Artillery\ArtilleryInit.sqf";
-//sleep 2.0;
-//[] execVM "WaveDefense\WaveInit.sqf";
-//sleep 2.0;
+if (!hasInterface && !isDedicated) then {
+    headlessClients = [];
+    headlessClients set [(count headlessClients), player];
+    publicVariable "headlessClients";
+    headlessClientsOwners = [];
+    headlessClientsOwners set [(count headlessClientsOwners), clientOwner];
+    publicVariable "headlessClientsOwners";
+};
 
-setViewDistance 9000;
-setTerrainGrid 6.25;
-setObjectViewDistance [4000,800];
-setDetailMapBlendPars [50, 150];
+//call compile preprocessFileLineNumbers "config.sqf"; // FIXME
 
+//enableSaving [true, true];
+enableSaving [ false, false ]; // Saving disabled without autosave.
 
+setTerrainGrid ( ("Param_Grass" call BIS_fnc_getParamValue)*3.125 );
+setViewDistance ("Param_ViewDistance" call BIS_fnc_getParamValue);
+setObjectViewDistance [("Param_ObjectViewDistance" call BIS_fnc_getParamValue),("Param_ShadowViewDistance" call BIS_fnc_getParamValue)];
+setDetailMapBlendPars [("Param_DetailBlend" call BIS_fnc_getParamValue),("Param_DetailBlend" call BIS_fnc_getParamValue)*2.0];
 
-//init_fnc =
-//{
-//	"traffic_area" setMarkerAlpha 0.0;
-//	_laserT = createVehicle ["LaserTargetE", [0,0,0], [], 0, "NONE"]; 
-//	_laserT attachto [attack_heli0, [0, 0, 0]];
-//	attack_heli0 doTarget attack_heli0;
-//	attack_heli0 reveal attack_heli0;
-//};
+// blacklist for Alive
+//call compile preprocessFile "staticData.sqf";
 
-
-//ToggleAmbush = false;
-
-//[] spawn 
-//{
-//	while {!ToggleAmbush} do
-//	{
-//		{
-//			if (side _x == independent) then
-//			{
-//				if (set_ind_ambush distance _x < 350.0) then
-//				{
-//					_x setBehaviour "STEALTH"; 
-//					_x setCombatMode "BLUE";
-//					_x setSpeedMode "LIMITED";
-//					_x setUnitPos "DOWN";
-//					//hint "SET SAFE.";
-//				};
-//			};
-//		} forEach allUnits;
-//		sleep 5.0;
-//	};
-//};
-
-// start up EOS
-[] spawn EOS_fnc_Master;
-sleep 10.0;
-
-// Start up convoy
-[] spawn Saber_fnc_ConvoyMaster;
-sleep 10.0;
-
-// Start up artillery
-[] spawn FFE_fnc_Master;
-sleep 10.0;
-
- Start up Waves
-[] spawn Saber_fnc_WaveMaster;
-sleep 10.0;
+task0Done = false;
+task1Done = false;
+task2Done = false;
+task3Done = false;
