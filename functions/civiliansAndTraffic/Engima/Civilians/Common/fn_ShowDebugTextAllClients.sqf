@@ -1,3 +1,0 @@
-DJOCivilians_DebugTextEventArgs = _this;
-publicVariable "DJOCivilians_DebugTextEventArgs";
-DJOCivilians_DebugTextEventArgs call DJOCivilians_fnc_ShowDebugTextLocal;

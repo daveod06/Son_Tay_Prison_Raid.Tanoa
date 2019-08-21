@@ -1,2 +1,0 @@
-class SpawnRooftopStaticWeapons {};
-class RooftopStaticWeaponsMaster {};
