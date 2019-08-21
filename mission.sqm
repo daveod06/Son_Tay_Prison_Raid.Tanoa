@@ -43434,7 +43434,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this addaction [""Start the Raid!"", " \n "{ " \n "execVm ""banana1Recording.sqf""; " \n "execVm ""apple1Recording.sqf""; " \n "execVm ""apple2Recording.sqf""; " \n "execVm ""apple3Recording.sqf""; " \n "}, " \n "    [], " \n "    1.5,  " \n "    true,  " \n "    true,  " \n "    """", " \n "    ""true"", " \n "    3, " \n "    false, " \n "    """", " \n "    """" " \n "];}";
+				init="call{this addaction [""Start the Raid!"", " \n "{ " \n "execVm ""scripts\banana1Recording.sqf""; " \n "execVm ""scripts\apple1Recording.sqf""; " \n "execVm ""scripts\apple2Recording.sqf""; " \n "execVm ""scripts\apple3Recording.sqf""; " \n "}, " \n "    [], " \n "    1.5,  " \n "    true,  " \n "    true,  " \n "    """", " \n "    ""true"", " \n "    3, " \n "    false, " \n "    """", " \n "    """" " \n "];}";
 			};
 			id=2001;
 			type="HLC_AR_ammobox";
